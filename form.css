@@ -1,0 +1,35 @@
+
+                
+            .h{
+                background-color: darkblue;
+                color: white;
+            }
+        body{
+            background-color: ghostwhite;
+            
+            }
+            h1{
+                margin-left: 450px; 
+                padding-bottom: 40px;
+                padding-top: 40px;
+                font-size: 50px;
+                
+            }  
+
+     fieldset {
+               margin-right: 4000px;
+               margin-left: 300px ; 
+               margin-top:-28px;   
+}
+            .input{
+                padding-left: 200px;
+                padding-right: 200px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+input{
+    font-size: 20px;
+}
+#com{
+    color: red;
+}
