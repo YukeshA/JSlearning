@@ -1,35 +1,37 @@
-
-                
-            .h{
+*{
+    margin: 0;
+} 
+form{
+    
+}
+h1{
+                padding-top: 5px;
+                font-size: 50px;
                 background-color: darkblue;
-                color: white;
+                color: white;text-align: center;
+            
+
             }
         body{
             background-color: ghostwhite;
-            
             }
-            h1{
-                margin-left: 450px; 
-                padding-bottom: 40px;
-                padding-top: 40px;
-                font-size: 50px;
-                
-            }  
 
-     fieldset {
-               margin-right: 4000px;
-               margin-left: 300px ; 
-               margin-top:-28px;   
+     fieldset {width: 400px; margin-top: 10px;display: block;
+         margin-right: auto;margin-left: auto;
+               
+                  
 }
-            .input{
-                padding-left: 200px;
-                padding-right: 200px;
+.input{
+                padding-left: 50px;
+                padding-right: 5 0px;
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
-input{
+input,div{margin-left: 10px ;
     font-size: 20px;
 }
-#com{
+label{color: black;
+    font-size: 30px;}
+div{
     color: red;
 }
