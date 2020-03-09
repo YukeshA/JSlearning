@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <title>FORM VALIDATION</title>
@@ -16,47 +17,69 @@
 
                     var a=em.split(".");
                     if(fn==""){
-                        alert("Enter the FirstName");
-                        fname.focus();
+                       
+                     document.getElementById("f").innerHTML="Enter the first name"
+                       ff. focus();
                         return false;
                     }
+                    else{
+                        document.getElementById("f").innerHTML="";
+                    }
+                    
                     if(ln==""){
-                        alert("Enter the LastName");
-                        lname.focus();
+                        document.getElementById("l").innerHTML="Enter the last name";              
+                       ll.focus();
                         return false;
+                    }
+                        else{
+                        document.getElementById("l").innerHTML="";
                     }
                     if(uid==""){
-                        alert("Enter the UserId");
-                        uid.focus();
-                        return false;
+                        document.getElementById("u").innerHTML="Enter the UserId";               
+                        uu.focus();
+                        return false;}
+                        else{
+                        document.getElementById("u").innerHTML="";
+
                     }
                     if(em== ""){
-                    alert("please Enter your EmailId");
+                        document.getElementById("em").innerHTML="Enter the EmailId";        
+                        ee.focus();
+                        return false;
+                    }
+                        else{
+                        document.getElementById("em").innerHTML=" ";
+
+                    }
+                if(em.indexOf("@",0)<0 || em.indexOf(".",0)<0){
+                        document.getElementById("em").innerHTML="Enter the EmailId using '@ & .'";       
+                        ee.focus();
+                        return false;
+                    }
+                        else{
+                        document.getElementById("em").innerHTML=" ";
+
+                    }
+                
+                if(a[1].length<2){
+                    document.getElementById("em").innerHTML="Enter the Valid EmailId";        
+                       ee.focus();
                     return false;
                     }
-                if(em.indexOf("@",0)<0){
-                        alert("Please Enter valid EmailId");
-                        em.focus();
-                        return false;
-                }
-                if(em.indexOf(".",0)<0){
-                    alert("Please Enter valid EmailId");
-                    em.focus();
-                    return false;
-                }
-                if(a[1].length<2){
-                    alert("Please Enter valid EmailId");
-                    em.focus();
-                    return false; 
-                }
+                        else{
+                        document.getElementById("em").innerHTML=" ";
+
+                    }
                 if(p1==""){
-                        alert("Enter the Password");
-                        p1.focus();
+                        document.getElementById("pa").innerHTML="Enter the password";        
                         return false;
+                    }
+                        else{
+                        document.getElementById("pa").innerHTML="";
+
                     }
                 if(p1.localeCompare(p2)!=0){
                     alert("Password confirmation doesn't match Password");
-                    p2.focus();
                     return false;
                 }
                 
@@ -81,28 +104,41 @@
                 }
             }
         </script>
-        <div class="h"><h1>FormValidation</h1></div>
-      <form>
-        <fieldset>
+        <h1>FormValidation</h1>
+      <fieldset>
+        <form><br>
+       
             <div class="input" >
-                <input type="text" id="fname" placeholder="FirstName" required ><br><br>
-                
-                <input type="text" id="lname" placeholder="LastName" required><br><br>
-                
-                <input type="text" id="uid"placeholder="UserId" required><br><br>
-                 <input type="text" id="mail" placeholder="Email" required><br><br>
-                
-                <input type="password"placeholder="Password"id="p1"required><br><br>
-                
-                <input type="password" id="p2"placeholder="ConfirmPassword" oninput="my()" required><div id="com"></div><br><br>
+                <label>EnterName</label><br>
+                <input type="text" id="fname" name="ff" placeholder="FirstName"required >
+                <div id="f">
+                </div><br>
+                <label>LastName</label><br>
+                <input type="text" id="lname" name="ll"placeholder="LastName" required>
+                <div id="l">
+                </div><br>
+                <label>UserId</label><br>
+                <input type="text" id="uid" name="uu"placeholder="UserId" required>
+                <div id="u">
+                </div><br>
+                <label>EmailId</label><br>
+                 <input type="text" id="mail" name="ee"placeholder="Email" required minlength="5">
+                <div id="em">
+                </div><br>
+                <label>Password</label><br>
+                <input type="password"placeholder="Password" name="pp1"id="p1"required>
+                <div id="pa">
+                </div><br>
+                <label>ConfirmPassword</label><br>
+                <input type="password" id="p2"placeholder="ConfirmPassword" name="pp2" oninput="my()" required><div id="com"></div><br><br>
                 
                 
                   <input type="submit" onclick="validate()">
                   <input type="reset">
             </div>    
-          </fieldset>
         </form>
-      
+                </fieldset>
+
     </body>
     
 </html>
